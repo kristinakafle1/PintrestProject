@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PinIt - Bookmark Smarter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="font-sans text-white relative min-h-screen overflow-hidden">
+
+  <!-- ✨ Background Grid -->
+  <div class="absolute inset-0 z-0 grid grid-cols-3 gap-1 opacity-20 blur-sm">
+    <img src="Screenshot 2025-05-19 184713" class="w-full h-full object-cover"/>
+    
+  </div>
+
+  <!-- 🌟 Hero Section -->
+  <section class="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 bg-black/40 backdrop-blur-md">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Welcome to <span class="text-yellow-300">PinIt</span></h1>
+    <p class="text-xl md:text-2xl max-w-xl mb-8 text-white/90">Smartly bookmark and discover images that inspire you. Personalized, organized, and visual.</p>
+    <div class="space-x-4">
+      <button onclick="openModal('login')" class="bg-white/20 px-6 py-3 rounded-full hover:scale-105 transition font-semibold">Log In</button>
+      <button onclick="openModal('signup')" class="bg-yellow-300 text-purple-800 px-6 py-3 rounded-full hover:scale-105 transition font-semibold">Sign Up</button>
+      <button onclick="openModal('forgot')" class="underline hover:text-yellow-300">Forgot Password?</button>
+    </div>
+  </section>
+
+  <!-- 🔐 Modal Overlay -->
+  <div id="modalOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 transition-all duration-300">
+    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl w-full max-w-md mx-4 text-white relative border border-white/20 shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-6 text-3xl font-bold text-white hover:text-yellow-300">&times;</button>
+
+      <!-- Log In Form -->
+      <div id="login" class="form hidden">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-300">Log In</h2>
+        <input type="email" placeholder="Email" class="w-full mb-4 p-3 rounded bg-white/20 border border-white/30 text-white placeholder-white/70" />
+        <input type="password" placeholder="Password" class="w-full mb-4 p-3 rounded bg-white/20 border border-white/30 text-white placeholder-white/70" />
+        <button class="w-full py-3 bg-yellow-300 text-purple-800 rounded-full font-bold hover:bg-yellow-400 transition">Login</button>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signup" class="form hidden">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-300">Sign Up</h2>
+        <input type="text" placeholder="Full Name" class="w-full mb-4 p-3 rounded bg-white/20 border border-white/30 text-white placeholder-white/70" />
+        <input type="email" placeholder="Email" class="w-full mb-4 p-3 rounded bg-white/20 border border-white/30 text-white placeholder-white/70" />
+        <input type="password" placeholder="Password" class="w-full mb-4 p-3 rounded bg-white/20 border border-white/30 text-white placeholder-white/70" />
+        <button class="w-full py-3 bg-yellow-300 text-purple-800 rounded-full font-bold hover:bg-yellow-400 transition">Create Account</button>
+      </div>
+
+      <!-- Forgot Password Form -->
+      <div id="forgot" class="form hidden">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-300">Reset Password</h2>
+        <input type="email" placeholder="Your Email" class="w-full mb-4 p-3 rounded bg-white/20 border border-white/30 text-white placeholder-white/70" />
+        <button class="w-full py-3 bg-yellow-300 text-purple-800 rounded-full font-bold hover:bg-yellow-400 transition">Send Reset Link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 💡 Script -->
+  <script>
+    function openModal(formId) {
+      document.getElementById('modalOverlay').classList.remove('hidden');
+      document.querySelectorAll('.form').forEach(f => f.classList.add('hidden'));
+      document.getElementById(formId).classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
