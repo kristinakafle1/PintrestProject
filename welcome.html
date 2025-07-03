@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to PinIt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #888;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      word-break: break-word;
+    }
+    .highlight {
+      color: #FFD700;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      flex: 1 1 auto;
+      min-width: 120px;
+    }
+    .btn-login {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    .btn-login:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .btn-signup {
+      background: #FFD700;
+      color: #333;
+      font-weight: bold;
+    }
+    .btn-signup:hover {
+      background: #ffc700;
+    }
+    .btn-forgot {
+      background: transparent;
+      border: none;
+      color: #fff;
+      text-decoration: underline;
+      padding: 0;
+      flex: 1 1 100%;
+      min-width: auto;
+    }
+    .btn-forgot:hover {
+      color: #FFD700;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to <span class="highlight">PinIt</span></h1>
+    <p>Smartly bookmark and discover images that inspire you. Personalized, organized, and visual.</p>
+    <div class="buttons">
+      <a href="#" class="btn btn-login">Log In</a>
+      <a href="#" class="btn btn-signup">Sign Up</a>
+      <a href="#" class="btn btn-forgot">Forgot Password?</a>
+    </div>
+  </div>
+</body>
+</html>
