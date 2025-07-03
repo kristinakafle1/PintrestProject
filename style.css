@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-page {
+  background-color: #888;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.welcome-page .container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.highlight {
+  color: #FFD700;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 10px;
+  min-width: 120px;
+}
+
+.btn-login {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.btn-signup {
+  background: #FFD700;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-signup:hover {
+  background: #ffc700;
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 100%;
+  }
+}
